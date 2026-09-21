@@ -25,6 +25,7 @@
     "supabase:reset": "supabase db reset && node tools/setup-local-resources.mjs",
     "supabase:stop": "supabase stop",
     "docker:up": "docker compose --env-file .env.local -f compose.local.yml up --build -d",
+    "docker:preview": "docker compose --env-file .env.local -f compose.local.yml up --build -d preview",
     "docker:down": "docker compose --env-file .env.local -f compose.local.yml down",
     "docker:logs": "docker compose --env-file .env.local -f compose.local.yml logs -f web ai-mock",
     "cleanup:media": "node tools/run-media-cleanup.mjs",

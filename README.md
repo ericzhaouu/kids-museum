@@ -41,11 +41,15 @@ powershell -NoProfile -ExecutionPolicy Bypass -File tools\bootstrap-local.ps1 -F
 
 ```powershell
 npm.cmd run docker:up
+npm.cmd run docker:preview
 ```
 
 浏览器访问 `http://localhost:3000`。应用容器通过
 `host.docker.internal:54321` 访问 Supabase，而浏览器仍通过
 `127.0.0.1:54321` 访问公开 API；两类地址已明确分离。
+
+如需不登录直接查看示范展览和馆长台，运行 `npm.cmd run docker:preview`，
+访问 `http://127.0.0.1:3100`。该服务强制使用演示数据，不读取真实私密馆藏。
 
 查看日志或停止应用容器：
 
